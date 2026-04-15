@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // ---------- Navbar Scroll ----------
   const navbar = document.querySelector('.navbar');
   const scrollTop = document.querySelector('.scroll-top');
+  const waFloat = document.querySelector('.wa-float');
 
   function handleScroll() {
     const scrollY = window.scrollY;
@@ -38,6 +39,14 @@ document.addEventListener('DOMContentLoaded', function () {
         scrollTop.classList.add('visible');
       } else {
         scrollTop.classList.remove('visible');
+      }
+    }
+
+    if (waFloat) {
+      if (scrollY > 400) {
+        waFloat.classList.add('visible');
+      } else {
+        waFloat.classList.remove('visible');
       }
     }
   }
